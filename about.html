@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="./assests/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <style>
+        .col-border {
+            border-right: 2px solid #000;
+            /* Màu đen */
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .left-about{
+            padding-left: 30px;
+        }
+        /*responsive*/
+        @media (max-width: 768px) {
+            .col-border {
+                border-right: none;
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+            .left-about{
+                padding-left: 0px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="home">
+            <a href="index.html">
+                <img src="./assests/img/logo2.svg" alt="logo" width="150px" height="50px">
+            </a>
+            <nav class="navbar ">
+                <a  href="index.html">TRANG CHỦ</a>
+                <a class="" href="product.html">SẢN PHẨM</a>
+                <a href="blog.html">BÀI VIẾT</a>
+                <a class="active" href="about.html">VỀ OLIMÊ HERBAL</a>
+                <a href="#contact">LIÊN HỆ</a>
+            </nav>
+            <dev class="icon">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search"></i>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </dev>
+        </header>
+
+        <div class="content2 p-5 " style="margin-top: 100px ; background-color: #FFFFFF;" id="blog">
+            <div class="title fs-5">
+                <h1 class="fw-bold d-flex justify-content-center ">Câu chuyện thương hiệu</h1>
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <img src="./assests/img/about.png" alt="">
+                </div>
+                <div class="row g-2">
+                    <div class="col-12 col-md-6 col-border">
+                        <h2 class="fw-bold">Ý nghĩa thương hiệu</h2>
+                        <p>
+                            <span class="fw-bold">Olimê</span>: O viết tắt cho Organic (Hữu cơ), Li viết tắt cho
+                            Licorice (Cam thảo) và Mê trong từ “say mê” theo nghĩa Tiếng Việt.
+                        </p>
+                        <p><span class="fw-bold">Herbal</span> có nghĩa là liên quan đến thảo dược hoặc cây cỏ. Đây là
+                            một từ thường được sử dụng trong lĩnh vực làm đẹp và chăm sóc sức khỏe để chỉ các sản phẩm
+                            hoặc thành phần có nguồn gốc từ cây cỏ hoặc thảo dược tự nhiên.
+                        </p>
+                        <p>Khi ghép chúng lại, <span class="fw-bold">"Olimê Herbal"</span> có thể ngụ ý rằng sản phẩm
+                            hoặc doanh nghiệp liên quan đến việc sử dụng các thành phần tự nhiên, đặc biệt là các thành
+                            phần thảo dược hoặc từ cây cỏ, để tạo ra các sản phẩm chăm sóc sức khỏe hoặc làm đẹp.
+                        </p>
+                        <p>Doanh nghiệp chúng tôi hướng đến sử dụng chiến lược thương hiệu dù cho tất cả các sản phẩm
+                            nhằm tập trung mọi nguồn lực vào việc đầu tư và phát phát triển thương hiệu Olimê. Ngoài ra
+                            chúng tôi muốn xây dựng thương hiệu vừa dễ nhớ, dễ phát âm vừa truyền tải được thông điệp
+                            của doanh nghiệp, gợi cho khách hàng nhớ sản phẩm Olimê là những sản phẩm hoàn toàn từ
+                            nguyên liệu hữu cơ, tự nhiên với thành phần chính là chiết xuất cam thảo.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 left-about" >
+                        <h2 class="fw-bold">Ý tưởng ra đời thương hiệu:</h2>
+                        <p>Cam thảo không chỉ tồn tại trong thiên nhiên mà còn có khả năng cải thiện sức khỏe bên trong
+                            lẫn bí quyết vô giá để làm đẹp bên ngoài. Được coi là một trong những "vàng thảo dược," cam
+                            thảo đã trở thành bảo vật của y học cổ đại và làm đẹp tự nhiên.
+                        </p>
+                        <p>Nhóm tác giả trong quá trình nghiên cứu và phát triển sản phẩm mới đã quyết định duy trì
+                            truyền thống này và mang cam thảo vào cuộc sống của bạn vì chúng tôi tin rằng tất cả những
+                            gì tốt đẹp nhất đều xuất phát từ thiên nhiên. Từ đó doanh nghiệp mang tên “Olimê Herbal” ra
+                            đời. Tại đây, mỗi sản phẩm mà Olimê Herbal cho ra mắt sẽ mang lại trải nghiệm hoàn toàn mới
+                            cho người tiêu dùng, tạo ra một môi trường nơi bạn có thể yên tâm, hài lòng đối với chất
+                            lượng lẫn an toàn về sức khỏe và làm đẹp với chiết xuất từ các thành phần thiên nhiên thiên
+                            nhiên quý giá mà chúng tôi đem đến.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="email d-flex justify-content-center align-items-center mt-3 p-5" id="aboutus" style=>
+            <div class="content p-5" style="background-color: #FAEFDA; width: 30%;">
+                <p class="text fs-1 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được thông tin khuyến mãi sớm nhất
+                <p>
+                <form>
+                    <div class="mb-3" style="width: 80%;">
+                        <label for="exampleInputEmail1" class="form-label fw-bold">Nhập địa chỉ email:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="abc@gmail.com">
+                        <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai.
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button type="submit" class="btn btn-outline-secondary fw-bold">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <footer id="contact">
+            <div class="container">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-3">
+                        <div class="useful-link">
+                            <h2>Useful Links</h2>
+                            <div class="use-links">
+                                <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                                <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                                <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                                <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="social-links">
+                            <h2>Follow Us</h2>
+                            <div class="social-icons">
+                                <li><a href="https://www.facebook.com/olimeherbal"><i
+                                            class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="address">
+                            <h2>Công ty cổ phần Olimê Việt Nam</h2>
+                            <div class="address-links">
+                                <li class="address1"><i class="fa-solid fa-location-dot"></i> Đường Hồng Hà, Phường 2,
+                                    Quận Tân Bình, Thành phố Hồ Chí Minh, Việt Nam.</li>
+                                <li><a href=""><i class="fa-solid fa-phone"></i> (+84)28.6368999</a></li>
+                                <li><a href=""><i class="fa-solid fa-envelope"></i> work@olime.com.vn</a></li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

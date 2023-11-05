@@ -24,20 +24,35 @@
         })(window, document, 'script', 'dataLayer', 'GTM-NZ9W42XL');
     </script>
     <style>
+        body{
+            background-color: #FEFAE0;
+        }
+
         @media (max-width: 767px) {
 
             /* Chia nội dung thành 4 hàng trong chế độ màn hình điện thoại */
             .container1 .row {
                 display: block;
-                
+
             }
 
             /* Tắt padding-left khi ở chế độ màn hình điện thoại */
             .col-6.col-border {
                 padding-left: 0;
             }
-            .category{
+
+            .category {
                 width: 100%;
+            }
+
+            .d-flex.justify-content-between {
+                justify-content: flex-start;
+                /* Đặt lại chỗ nút Đăng ký sang phía bên phải */
+            }
+
+            .register-button {
+                margin-top: 0;
+                /* Loại bỏ margin-top cho nút Đăng ký */
             }
         }
     </style>
@@ -194,11 +209,11 @@
             </div>
         </div> -->
 
-        <div class="certificate p-5 d-flex justify-content-center align-items-center flex-column">
+        <div class="certificate p-5 d-flex justify-content-center align-items-center flex-column" style="background-color: #FEFAE0;">
             <h3 class="mb-5"> Chứng nhận bởi các tổ chức Quốc tế </h3>
             <div class="row mx-auto d-flex align-items-center justify-content-between">
                 <div class="content2 d-flex flex-column justify-content-center align-items-center"
-                    style="max-width: 400px; padding-left: 20px;">
+                    style="max-width: 400px; padding-left: 20px; border: 1px solid #ccc; margin: 5px; border-radius: 5px;">
                     <img src="./assests/img/certificate1.svg" alt="">
                     <p class="text fs-1"><span class="fw-bold">Leaping Bunny</span>
                     <p>
@@ -208,7 +223,7 @@
                         "tiêu chuẩn vàng" toàn cầu cho các sản phẩm không thử nghiệm trên động vật.</p>
                 </div>
                 <div class="content2 d-flex flex-column justify-content-center align-items-center"
-                    style="max-width: 400px; padding-left: 20px;">
+                    style="max-width: 400px; padding-left: 20px; border: 1px solid #ccc;  margin: 5px; border-radius: 5px;">
                     <img src="./assests/img/certificate2.svg" alt="">
                     <p class="text fs-1"><span class="fw-bold">
                             The Vegan Society
@@ -224,7 +239,7 @@
                     </p>
                 </div>
                 <div class="content2 d-flex flex-column justify-content-center align-items-center"
-                    style="max-width: 400px; padding-left: 20px;">
+                    style="max-width: 400px; padding-left: 20px; border: 1px solid #ccc;  margin: 5px; border-radius: 5px;">
                     <img src="./assests/img/certificate.svg" alt="">
                     <p class="text fs-1"><span class="fw-bold">
                             PETA
@@ -243,7 +258,7 @@
         </div>
         <div class="container1 d-flex justify-content-center align-items-center flex-column" id="about"
             style="background-color: #FEFAE0; padding: 40px;">
-            <h1 class="fw-bold" style="color: #507d26;">Olimê Herbal</h1>
+            <h1 class="fw-bold">OLIMÊ HERBAL</h1>
             <div class="row row-cols-2 justify-content-between">
                 <div class="p-3 category">
                     <h2 class="fw-bold">Tầm nhìn doanh nghiệp </h2>
@@ -296,21 +311,21 @@
                 </button>
             </div>
         </div>
-        <div class="email d-flex justify-content-center align-items-center mt-3 p-5" id="contact"
-            style="background-color: white;">
-            <div class="content p-5" style="background-color: #FAEFDA; width: 30%;">
-                <p class="text fs-1 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được thông tin khuyến mãi sớm nhất
-                <p>
-                <form>
-                    <div class="mb-3" style="width: 80%;">
+        <div class="email d-flex justify-content-center align-items-center mt-3" id="contact"
+            style="background-color: white; ">
+            <div class="content p-3" style="background-color: #FAEFDA; width: 40%; min-height: 200px;">
+                <p class="text fs-2 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được khuyến mãi sớm nhất
+                </p>
+                <form class="d-flex justify-content-between">
+                    <div class="mb-3 email-register" style="min-width: 340px; max-width: 400px;">
                         <label for="exampleInputEmail1" class="form-label fw-bold">Nhập địa chỉ email:</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="abc@gmail.com">
+                            placeholder="abc@gmail.com" style="margin-right: 5px;">
                         <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai.
                         </div>
                     </div>
-                    <div style="margin-top: 20px;">
-                        <button type="submit" class="btn btn-outline-secondary fw-bold">Đăng ký</button>
+                    <div class="register-button" style="margin-top: 30px;  min-width: 90px;">
+                        <button type="submit" class="btn btn-outline-secondary fw-bold auto-width">Đăng ký</button>
                     </div>
                 </form>
             </div>
@@ -322,10 +337,10 @@
                         <div class="useful-link">
                             <h2>Useful Links</h2>
                             <div class="use-links">
-                                <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
-                                <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
-                                <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                                <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Trang chủ</a></li>
+                                <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> Về chúng tôi</a></li>
+                                <li><a href="product.html"><i class="fa-solid fa-angles-right"></i> Sản phẩm</a></li>
+                                <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Liên hệ</a></li>
                             </div>
                         </div>
                     </div>
@@ -335,8 +350,7 @@
                             <div class="social-icons">
                                 <li><a href="https://www.facebook.com/olimeherbal"><i
                                             class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+                                <li><a href="https://www.tiktok.com/@olimeherbal?lang=en"><i class="fa-brands fa-tiktok"></i> Tiktok</a></li>
                             </div>
                         </div>
                     </div>
@@ -346,7 +360,7 @@
                             <div class="address-links">
                                 <li class="address1"><i class="fa-solid fa-location-dot"></i> Đường Hồng Hà, Phường 2,
                                     Quận Tân Bình, Thành phố Hồ Chí Minh, Việt Nam.</li>
-                                <li><a href=""><i class="fa-solid fa-phone"></i> (+84)28.6368999</a></li>
+                                <li><a href=""><i class="fa-solid fa-phone"></i> (+84) 28.6368999</a></li>
                                 <li><a href=""><i class="fa-solid fa-envelope"></i> work@olime.com.vn</a></li>
                             </div>
                         </div>

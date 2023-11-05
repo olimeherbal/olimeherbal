@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài viết</title>
+    <title>Sản phẩm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -12,6 +12,57 @@
     <link rel="icon" href="./assests/img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <style>
+        .price-current {
+            text-decoration: none;
+            color: black;
+            /* Màu chữ mặc định */
+            animation: blink 1s linear infinite;
+            /* Sử dụng animation "blink" với thời gian 1 giây và lặp vô hạn */
+        }
+
+        @keyframes blink {
+            0% {
+                color: black;
+            }
+
+            50% {
+                color: white;
+                /* Màu chữ khi đang nhấp nháy */
+            }
+
+            100% {
+                color: black;
+            }
+        }
+
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .quantity-button {
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 30px;
+        }
+
+        .quantity {
+            display: inline-block;
+            padding: 0 10px;
+        }
+    </style>
+    <style>
+        /* CSS cho màn hình điện thoại */
+        @media (max-width: 576px) {
+            .right-button{
+                margin-right: 20px;
+            }
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -23,7 +74,7 @@
             <nav class="navbar ">
                 <a href="index.html">TRANG CHỦ</a>
                 <a class="active" href="product.html">SẢN PHẨM</a>
-                <a  href="blog.html">BÀI VIẾT</a>
+                <a href="blog.html">BÀI VIẾT</a>
                 <a href="about.html">VỀ OLIMÊ HERBAL</a>
                 <a href="#contact">LIÊN HỆ</a>
             </nav>
@@ -35,105 +86,270 @@
             </dev>
         </header>
 
-        <div class="content2 p-5" style="margin-top: 100px ; background-color: #eee;" id="blog">
-            <div class="title fs-5">
-                <h1 class="fw-bold">🌱 Chiến dịch "Tái sinh chai rỗng" từ Olimê Hair Care - Góp phần bảo vệ môi trường
-                    và tái chế rác thải nhựa 🌱</h1>
-                <hr>
-                <p style="margin-top: 20px;">Khi ra mắt Olimê Hair Care, chúng tôi không chỉ quan tâm đến việc mang đến cho bạn mái tóc đẹp và
-                    khỏe mạnh, mà còn đặc biệt chú trọng đến bảo vệ môi trường. Vì vậy, chúng tôi vô cùng tự hào giới
-                    thiệu chiến dịch "<span class="fw-bold">Tái sinh chai rỗng</span>"!
-                </p>
-                <p>🌿 <span class="fw-bold">Bảo vệ môi trường</span>: Trước khi ra mắt sản phẩm, chúng tôi đã nghiên cứu và sàng lọc kĩ khi lựa chọn
-                    nhựa số 2 - loại nhựa có khả năng tái chế và tái sử dụng nhiều lần:
-                </p>
-                <div style="margin-left: 50px;">
-                    <li>• <span class="fst-italic  fw-bold"">Thứ nhất</span>, nếu khách hàng có nhu cầu sử dụng tiếp thì vẫn có thể đựng vào chai rỗng này.
-                    </li>
-                    <p>• <span class="fst-italic fw-bold"">Thứ hai</span>, khi không sử dụng nữa thay vì phải thải ra môi trường thì chúng tôi sẽ thu gom lại và đưa
-                        đến các cộng đồng tái chế nhựa để tạo ra những sản phẩm khác hay hơn. 
-                    </p>
-                    <p><span class="fw-bold"">Đặc biệt</span>, vào cuối mỗi tháng
-                        chúng tôi sẽ tổ chức workshop để cho mọi người sáng tạo theo ý thích từ chai nhựa rỗng để tuyên
-                        truyền ý thức bảo vệ môi trường.</p>
+        <div class="container" style="margin-top: 100px;" ">
+            <div class=" row p-4" style="border: 1px solid #ccc; margin: 5px; border-radius: 5px;">
+            <div class="col-md-6">
+                <img src="/assests/product1.png" class="img-fluid" alt="OLIMÊ HAIR CARE - Dầu gội xả">
+            </div>
+            <div class="col-md-6 mt-5">
+                <!-- Tên sản phẩm và options -->
+                <h1 class="fw-bold">OLIMÊ HAIR CARE - Dầu gội xả</h1>
+                <h2 class="product-option fw-bold" style="color: #ABC775;">1 chai dầu gội dung tích 200ml</h2>
+                <div class="price">
+                    <h3 class="price-old fw-bold" style="text-decoration: line-through; color: #929292;">Giá cũ:
+                        200.000đ</h3>
+                    <h3 class="price-current fw-bold">Giá hiện tại: 150.000đ</h3>
                 </div>
-                <p>🎁<span class="fw-bold"">Nhận quà đổi chai cũ</span> : Chỉ cần mang đến cửa hàng Olime Hair Care từ 5 chai rỗng đã sử dụng của nhà
-                    Olimê, bạn sẽ được thưởng thức ưu đãi hấp dẫn, cụ thể như sau: 5 chai rỗng dầu gội của “Olimê Hair
-                    Care” đồng dung tích thì sẽ được tặng 1 chai dầu gội mới cùng dung tích hay 5 chai rỗng với dung
-                    tích khác nhau sẽ được tặng voucher giảm 30% áp dụng cho lần mua tiếp theo. Đây là cách chúng tôi
-                    muốn tri ân sự ủng hộ của bạn và cùng nhau góp phần bảo vệ môi trường.
-                </p>
-                <p>🌸 Olime Hair Care cam kết tiếp tục phát triển và thực hiện các hoạt động bảo vệ môi trường, và chúng
-                    tôi rất hạnh phúc được có bạn là đối tác trong hành trình chung tay bảo vệ môi trường và giảm thiểu
-                    lượng chai nhựa được bỏ đi mỗi ngày.
-                </p>
-                <p>Hãy tham gia ngay hôm nay và cùng chúng tôi làm cho thế giới trở nên xanh hơn, một chai nhựa cùng một
-                    quả đất. 💚🌏
-                </p>
-            </div>
-        </div>
-        <div class="email d-flex justify-content-center align-items-center mt-3" id="contact"
-            style="background-color: #FEFAE0; ">
-            <div class="content p-3" style="background-color: #C7DCB3; width: 40%; min-height: 200px;">
-                <p class="text fs-2 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được khuyến mãi sớm nhất
-                </p>
-                <form class="d-flex justify-content-between">
-                    <div class="mb-3 email-register" style="min-width: 340px; max-width: 400px;">
-                        <label for="exampleInputEmail1" class="form-label fw-bold">Nhập địa chỉ email:</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="abc@gmail.com" style="margin-right: 5px;">
-                        <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai.
-                        </div>
-                    </div>
-                    <div class="register-button" style="margin-top: 30px;  min-width: 90px;">
-                        <button type="submit" class="btn btn-outline-dark fw-bold auto-width">Đăng ký</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        
-
-        <footer id="contact">
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-md-3">
-                        <div class="useful-link">
-                            <h2>Useful Links</h2>
-                            <div class="use-links">
-                                <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
-                                <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
-                                <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="social-links">
-                            <h2>Follow Us</h2>
-                            <div class="social-icons">
-                                <li><a href="https://www.facebook.com/olimeherbal"><i
-                                            class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="address">
-                            <h2>Công ty cổ phần Olimê Việt Nam</h2>
-                            <div class="address-links">
-                                <li class="address1"><i class="fa-solid fa-location-dot"></i> Đường Hồng Hà, Phường 2,
-                                    Quận Tân Bình, Thành phố Hồ Chí Minh, Việt Nam.</li>
-                                <li><a href=""><i class="fa-solid fa-phone"></i> (+84)28.6368999</a></li>
-                                <li><a href=""><i class="fa-solid fa-envelope"></i> work@olime.com.vn</a></li>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="productOptions" class="fw-bold mb-2">Chọn sản phẩm:</label>
+                    <select class="form-control" id="productOptions">
+                        <option value="product1">1 chai dầu gội dung tích 200ml</option>
+                        <option value="product2">1 chai dầu gội có dung tích 500ml</option>
+                        <option value="product3">Combo 1: 1 chai 500ml + 1 chai 200ml</option>
+                        <option value="product4">Combo 2: 2 chai 500ml + tặng 1 chai 200ml</option>
+                    </select>
+                </div>
+                <div class="quantity-container mt-3">
+                    <div class="fs-5" style="margin-right: 20px;">Số lượng: </div>
+                    <button class="btn btn-outline-secondary fs-4" id="decrement"
+                        style="border: 1px solid #ccc; margin: 5px; border-radius: 5px; width: 50px; height:50px;">-</button>
+                    <div class="quantity fs-5" id="quantity">1</div>
+                    <button class="btn btn-outline-secondary fs-4" id="increment"
+                        style="border: 1px solid #ccc; margin: 5px; border-radius: 5px; width: 50px; height:50px;">+</button>
+                </div>
+                <div class="buyproduct d-flex justify-content-end">
+                    <button class="btn btn-secondary mt-5" style="margin-right: 20px;">Thêm vào giỏ hàng</button>
+                    <button class="btn btn-outline-danger mt-5 right-button">
+                        <i class="fas fa-shopping-cart"></i>
+                        Mua ngay</button>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
+    <div class="row mt-4 p-4 justify-content-between align-items-center flex-column">
+        <div class="col-md-12 p-4 fs-5 " style="border: 1px solid #ccc; margin: 5px; border-radius: 5px;">
+            <!-- Mô tả sản phẩm -->
+            <h1 class="fw-bold">MÔ TẢ SẢN PHẨM</h1>
+            <h4>Công dụng Dầu gội xả Olimê Hair Care</h4>
+            <p>• Dưỡng tóc, giúp tóc chắc khỏe.</p>
+            <p>• Kích thích mọc tóc và dài nhanh.
+            </p>
+            <p>• Làm sạch và ngăn ngừa viêm da đầu.</p>
+
+            <h4>Thành phần chính Dầu gội xả Olimê Hair Care: <span class="fw-bold">3L</span>
+            </h4>
+            <p>• Cam thảo (<span class="fw-bold">Licorice</span>):</p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Tái Tạo Tóc</span>: Cam thảo chứa các hợp chất có
+                khả năng tái tạo tóc và giúp phục
+                hồi tóc hư tổn. Nó có thể giúp tóc trở nên mạnh mẽ hơn và giảm hiện tượng gãy rụng.
+            </p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Ngăn Ngừa Viêm Da Đầu</span>: Cam thảo có tính chất
+                chống viêm và kháng khuẩn, giúp
+                làm dịu da đầu và ngăn ngừa viêm nhiễm.
+            </p>
+
+            <p>• Bồ kết (<span class="fw-bold">Locust</span>):
+            </p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Làm Mềm Mượt</span>: Bồ kết chứa axit béo và
+                vitamin giúp tóc trở nên mềm mượt và
+                dễ quản lý. Nó cung cấp độ ẩm cho tóc, ngăn tóc khô và xơ.
+            </p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Tạo Sự Bóng Bẩy</span>: Bồ kết giúp tạo sự bóng bẩy
+                tự nhiên cho tóc, làm cho tóc trở nên sáng bóng.
+
+            </p>
+            </p>
+            <p>• Hoa oải hương (<span class="fw-bold">Lavender</span>):</p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Hương Thơm Dịu Dàng</span>: Oải hương tạo hương
+                thơm độc đáo và dịu dàng cho tóc, mang đến trải nghiệm thư giãn và thú vị khi sử dụng sản phẩm.
+
+            </p>
+            <p style="margin-left: 10px;">- <span class="fst-italic">Cân Bằng Da Đầu</span>: Oải hương có khả năng cân
+                bằng da đầu, giúp kiểm soát dầu thừa và làm sạch da đầu.
+
+            </p>
+            <h4>Cam kết Dầu gội + xả Olimê Hair Care thuần chay
+            </h4>
+            <p>• Không Sulfate
+            </p>    
+            <p>• Không Paraben (Paraben free)
+            </p>
+            <p>• Không Silicone
+            </p>
+            <p>• 100% thuần chay
+            </p>
+            <p>Mở nắp dùng trong 24 tháng.
+            </p>
+            <h4>Thành phần đầy đủ Dầu gội xả Olimê Hair Care:
+            </h4>
+            Aqua/Water, Licorice, Locust, Lavender, glycolipids, olive(Olea Europaea (Olive) Fruit Oil) , Vitamin B5 – acid pantothenate, Persea Gratissima (Avocado) Oil và 1 số thảo dược như: hà thủ ô, cỏ mần trầu, hương nhu, Cao lá ổi (Guava Leaf Extract Powder),phenoxyethanol, ethylylglycerin.
+
+        </div>
+    </div>
+    <div class="email d-flex justify-content-center align-items-center" id="contact"
+        style="background-color: #FEFAE0; ">
+        <div class="content p-3" style="background-color: #C7DCB3; width: 40%; min-height: 200px;">
+            <p class="text fs-2 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được khuyến mãi sớm nhất
+            </p>
+            <form class="d-flex justify-content-between">
+                <div class="mb-3 email-register" style="min-width: 340px; max-width: 400px;">
+                    <label for="exampleInputEmail1" class="form-label fw-bold">Nhập địa chỉ email:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp"
+                        placeholder="abc@gmail.com" style="margin-right: 5px;">
+                    <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ
+                        ai.
+                    </div>
+                </div>
+                <div class="register-button" style="margin-top: 30px;  min-width: 90px;">
+                    <button type="submit" class="btn btn-outline-dark fw-bold auto-width" id="register"
+                        onclick="registerClicked()">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-3">
+                    <div class="useful-link">
+                        <h2>Useful Links</h2>
+                        <div class="use-links">
+                            <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                            <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Gallery</a></li>
+                            <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="social-links">
+                        <h2>Follow Us</h2>
+                        <div class="social-icons">
+                            <li><a href="https://www.facebook.com/olimeherbal"><i class="fa-brands fa-facebook-f"></i>
+                                    Facebook</a></li>
+                            <li><a href="https://www.tiktok.com/@olimeherbal?lang=en"><i
+                                        class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+                            <li><a href="https://www.instagram.com/olimeherbal/"><i class="fa-brands fa-instagram"></i>
+                                    Instagram</a></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="address">
+                        <h2>Công ty cổ phần Olimê Việt Nam</h2>
+                        <div class="address-links">
+                            <li class="address1"><i class="fa-solid fa-location-dot"></i> Đường Hồng Hà, Phường
+                                2,
+                                Quận Tân Bình, Thành phố Hồ Chí Minh, Việt Nam.</li>
+                            <li><a href=""><i class="fa-solid fa-phone"></i> (+84)28.6368999</a></li>
+                            <li><a href=""><i class="fa-solid fa-envelope"></i> work@olime.com.vn</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+        function registerClicked() {
+            event.preventDefault();
+            // Hiển thị thông báo tùy chỉnh thay vì sử dụng alert mặc định
+            // check xem input có rỗng hay không
+            if (document.getElementById('exampleInputEmail6').value == '') {
+                alert('Vui lòng nhập email');
+                return;
+            }
+            var customAlert = document.createElement('div');
+            customAlert.innerHTML = 'Đã đăng ký thành công';
+            customAlert.style.backgroundColor = '#C7DCB3';
+            customAlert.style.color = 'white';
+            customAlert.style.padding = '10px';
+            customAlert.style.position = 'fixed';
+            customAlert.style.top = '10px';
+            customAlert.style.left = '50%';
+            customAlert.style.transform = 'translateX(-50%)';
+            customAlert.style.zIndex = '1000';
+            //width = 200px, height = 100px;
+            customAlert.style.width = '400px';
+            //border-radius = 5px;
+            customAlert.style.borderRadius = '5px';
+            //text-align = center;
+            customAlert.style.textAlign = 'center';
+            //font-size = 16px;
+            customAlert.style.fontSize = '24px';
+            //font bold
+            customAlert.style.fontWeight = 'bold';
+            document.body.appendChild(customAlert);
+
+            console.log('Đã đăng ký thành công');
+            // Xóa thông báo sau một khoảng thời gian (ví dụ: 3 giây)
+            setTimeout(function () {
+                customAlert.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+    <script>
+        const productOptions = document.getElementById("productOptions");
+        const productImage = document.querySelector(".img-fluid");
+        const productName = document.querySelector(".product-option");
+        const priceOld = document.querySelector(".price-old");
+        const priceCurrent = document.querySelector(".price-current");
+
+        productOptions.addEventListener("change", function () {
+            const selectedProduct = productOptions.value;
+            if (selectedProduct === "product1") {
+                productImage.src = "/assests/product1.png";
+                productName.textContent = "1 chai dầu gội dung tích 200ml";
+                priceOld.textContent = "Giá cũ: 200.000đ";
+                priceCurrent.textContent = "Giá hiện tại: 150.000đ";
+            } else if (selectedProduct === "product2") {
+                productImage.src = "/assests/product2.png";
+                productName.textContent = "1 chai dầu gội có dung tích 500ml";
+                priceOld.textContent = "Giá cũ: 300.000đ";
+                priceCurrent.textContent = "Giá hiện tại: 228.000đ";
+            } else if (selectedProduct === "product3") {
+                productImage.src = "/assests/product3.png";
+                productName.textContent = "Combo 1: 1 chai 500ml+ 1 chai 200ml";
+                priceOld.textContent = "Giá cũ: 300.000đ";
+                priceCurrent.textContent = "Giá hiện tại: 299.000đ";
+            } else if (selectedProduct === "product4") {
+                productImage.src = "/assests/product4.png";
+                productName.textContent = "Combo 2: 2 chai 500ml + tặng 1 chai 200ml";
+                priceOld.textContent = "Giá cũ: 300.000đ";
+                priceCurrent.textContent = "Giá hiện tại: 398.000đ";
+            }
+        });
+    </script>
+
+    <script>
+        const decrementButton = document.getElementById("decrement");
+        const incrementButton = document.getElementById("increment");
+        const quantityDisplay = document.getElementById("quantity");
+
+        let quantity = 1; // Số lượng ban đầu
+
+        // Xử lý sự kiện nút giảm số lượng
+        decrementButton.addEventListener("click", () => {
+            if (quantity > 1) {
+                quantity--;
+                updateQuantityDisplay();
+            }
+        });
+
+        // Xử lý sự kiện nút tăng số lượng
+        incrementButton.addEventListener("click", () => {
+            quantity++;
+            updateQuantityDisplay();
+        });
+
+        // Cập nhật hiển thị số lượng
+        function updateQuantityDisplay() {
+            quantityDisplay.textContent = quantity;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

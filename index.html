@@ -24,7 +24,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-NZ9W42XL');
     </script>
     <style>
-        body{
+        body {
             background-color: #FEFAE0;
         }
 
@@ -54,6 +54,19 @@
                 margin-top: 0;
                 /* Loại bỏ margin-top cho nút Đăng ký */
             }
+        }
+
+        .custom-alert {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            font-size: 16px;
         }
     </style>
     <!-- End Google Tag Manager -->
@@ -209,7 +222,8 @@
             </div>
         </div> -->
 
-        <div class="certificate p-5 d-flex justify-content-center align-items-center flex-column" style="background-color: #FEFAE0;">
+        <div class="certificate p-5 d-flex justify-content-center align-items-center flex-column"
+            style="background-color: #FEFAE0;">
             <h3 class="mb-5"> Chứng nhận bởi các tổ chức Quốc tế </h3>
             <div class="row mx-auto d-flex align-items-center justify-content-between">
                 <div class="content2 d-flex flex-column justify-content-center align-items-center"
@@ -311,7 +325,7 @@
                 </button>
             </div>
         </div>
-        <div class="email d-flex justify-content-center align-items-center mt-3" id="contact"
+        <div class="email d-flex justify-content-center align-items-center" id="contact"
             style="background-color: #FEFAE0; ">
             <div class="content p-3" style="background-color: #C7DCB3; width: 40%; min-height: 200px;">
                 <p class="text fs-2 fw-bold" style="color: #1F1C17;">Đăng ký để nhận được khuyến mãi sớm nhất
@@ -319,13 +333,14 @@
                 <form class="d-flex justify-content-between">
                     <div class="mb-3 email-register" style="min-width: 340px; max-width: 400px;">
                         <label for="exampleInputEmail1" class="form-label fw-bold">Nhập địa chỉ email:</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <input type="email" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp"
                             placeholder="abc@gmail.com" style="margin-right: 5px;">
                         <div id="emailHelp" class="form-text">Chúng tôi sẽ không chia sẻ email của bạn với bất kỳ ai.
                         </div>
                     </div>
                     <div class="register-button" style="margin-top: 30px;  min-width: 90px;">
-                        <button type="submit" class="btn btn-outline-dark fw-bold auto-width">Đăng ký</button>
+                        <button type="submit" class="btn btn-outline-dark fw-bold auto-width" id="register" onclick="registerClicked()">Đăng
+                            ký</button>
                     </div>
                 </form>
             </div>
@@ -350,7 +365,10 @@
                             <div class="social-icons">
                                 <li><a href="https://www.facebook.com/olimeherbal"><i
                                             class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-                                <li><a href="https://www.tiktok.com/@olimeherbal?lang=en"><i class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+                                <li><a href="https://www.tiktok.com/@olimeherbal?lang=en"><i
+                                            class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+                                <li><a href="https://www.instagram.com/olimeherbal/"><i
+                                            class="fa-brands fa-instagram"></i> Instagram</a></li>
                             </div>
                         </div>
                     </div>
@@ -379,6 +397,43 @@
         document.getElementById("buy").addEventListener("click", function () {
             window.location.href = "product.html";
         });
+        function registerClicked() {
+            event.preventDefault();
+            // Hiển thị thông báo tùy chỉnh thay vì sử dụng alert mặc định
+            // check xem input có rỗng hay không
+            if (document.getElementById('exampleInputEmail6').value == '') {
+                alert('Vui lòng nhập email');
+                return;
+            }
+            var customAlert = document.createElement('div');
+            customAlert.innerHTML = 'Đã đăng ký thành công';
+            customAlert.style.backgroundColor = '#C7DCB3';
+            customAlert.style.color = 'white';
+            customAlert.style.padding = '10px';
+            customAlert.style.position = 'fixed';
+            customAlert.style.top = '10px';
+            customAlert.style.left = '50%';
+            customAlert.style.transform = 'translateX(-50%)';
+            customAlert.style.zIndex = '1000';
+            //width = 200px, height = 100px;
+            customAlert.style.width = '400px';
+            //border-radius = 5px;
+            customAlert.style.borderRadius = '5px';
+            //text-align = center;
+            customAlert.style.textAlign = 'center';
+            //font-size = 16px;
+            customAlert.style.fontSize = '24px';
+            //font bold
+            customAlert.style.fontWeight = 'bold';
+            document.body.appendChild(customAlert);
+
+            console.log('Đã đăng ký thành công');
+            // Xóa thông báo sau một khoảng thời gian (ví dụ: 3 giây)
+            setTimeout(function () {
+                customAlert.style.display = 'none';
+            }, 2000);
+        }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
